@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+
 require 'mysql2'
 require 'faker'
 I18n.reload!

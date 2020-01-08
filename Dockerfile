@@ -16,10 +16,6 @@ CMD ruby /home/mfloader.rb $DOCKER_HOST
 
 
 
-
-
-
-
 #FROM ubuntu:16.04
 #MAINTAINER Jim <jim@jimb.cc>
 

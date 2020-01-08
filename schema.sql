@@ -1,3 +1,4 @@
+
 DROP DATABASE productsDB;
 CREATE DATABASE IF NOT EXISTS productsDB;
 USE productsDB;
