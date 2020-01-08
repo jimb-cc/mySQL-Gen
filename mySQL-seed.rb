@@ -54,7 +54,7 @@ def createNewOrder(client, numOrders)
 
     customers = client.query('SELECT * from Customer')
 
-    insertOrderData = "#{rand(1_000_000..2_000_000)},#{rand(1..customers.count)},#{rand(1000.0)}"
+    insertOrderData = "#{rand(1_000_000..2_000_000)},#{rand(1..customers.count)},#{rand(1.0..1000.0).round(2)}"
     puts insertOrderData
     client.query("INSERT INTO Orders (OrderNumber,CustomerID,TotalAmount) VALUES (#{insertOrderData});")
 
@@ -65,7 +65,7 @@ def createNewOrder(client, numOrders)
 
     # create order items
     (1..(rand(5)+1)).each do |_j|
-      insertOrderItemData = "#{lastOrders.count},#{rand(products.count)},#{rand(0.0..10.0)},#{rand(1..5)}"
+      insertOrderItemData = "#{lastOrders.count},#{rand(products.count)},#{rand(0.0..10.0).round(2)},#{rand(1..5)}"
       puts insertOrderItemData
       client.query("INSERT INTO OrderItem (OrderID,ProductID,UnitPrice,Quantity) VALUES (#{insertOrderItemData});")
     end
