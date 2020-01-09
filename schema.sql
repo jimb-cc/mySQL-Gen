@@ -1,5 +1,4 @@
-
-DROP DATABASE productsDB;
+DROP DATABASE IF EXISTS productsDB;
 CREATE DATABASE IF NOT EXISTS productsDB;
 USE productsDB;
 
